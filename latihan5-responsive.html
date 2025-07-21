@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Portofolio Diki</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header id="top">
+    <h1>Portofolio Diki</h1>
+  </header>
+
+  <main>
+    <section class="row">
+      <div class="column" data-aos="fade-up" data-aos-duration="1000">
+        <h2>👨‍💻 Tentang Saya</h2> <img src="https://via.placeholder.com/300x200" alt="Contoh Gambar">
+        <p>Saya pemula yang sedang belajar HTML dan CSS. Saya suka membangun website pribadi.</p>
+
+      </div>
+
+        <div class="column" data-aos="fade-up" data-aos-duration="1000">
+        <h2>📷 Hobi</h2>
+        <p>Fotografi, menyapu rumah, belajar coding, dan bantu orang tua.</p>
+      </div>
+
+      <div class="column" data-aos="fade-up" data-aos-duration="1000">
+        <h2>😎 Cita-cita</h2>
+        <p>Menjadi web developer yang handal dan memiliki studio fotografi sendiri.</p>
+      </div>
+
+      <div class="column" data-aos="fade-up" data-aos-duration="1000">
+        <h2>👌 Motivasi</h2>
+        <p>Belajar setiap hari dan terus berusaha untuk mencapai impian.</p>
+      </div>
+
+    </section>
+  </main>
+
+    <div class="column" data-aos="fade-up" data-aos-duration="1000">
+
+  <section class="cta">
+  <h2>Ingin Lihat Proyek Saya?</h2>
+  <a href="https://github.com/dikiandriana" class="btn">Lihat GitHub Saya</a>
+    <a href="https://www.linkedin.com/in/dikiandriana/" class="btn">Lihat LinkedIn Saya</a>
+</section>
+
+<section class="cta">
+  <h2>Hubungi Saya</h2>
+  <a href="mailto:dikiandriana@example.com" class="btn">Kirim Email </a>
+    <a href="https://wa.me/08123456789" class="btn">Chat di WhatsApp</a>
+
+    </div>
+
+</section>
+
+<section class="contact" data-aos="fade-up" data-aos-duration="1000">
+  <h2>💬 Kontak Saya</h2>
+  <form id="formKontak" action="https://formsubmit.co/diki.andriana21.das@gmail.com" method="POST" data-aos="zoom-in">
+    <input type="text" name="nama" id="nama" placeholder="Nama Anda" required>
+    <input type="email" name="email" id="email" placeholder="Email Anda" required>
+    <textarea name="pesan" id="pesan" placeholder="Pesan Anda" rows="5" required></textarea>
+    <input type="hidden" name="_next" value="https://dikiandriana.github.io/website-saya/terima-kasih.html">
+
+    <button type="submit">Kirim Pesan</button>
+    
+  </form>
+</section>
+
+
+  <p><a href="#top">↑ Kembali ke atas</a></p>
+
+  <footer>
+    <p>&copy; 2025 Diki. Dibuat dengan semangat belajar 💪</p>
+  </footer>
+
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  document.getElementById("formKontak").addEventListener("submit", function(e) {
+    const nama = document.getElementById("nama").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const pesan = document.getElementById("pesan").value.trim();
+
+    if (!nama || !email || !pesan) {
+      alert("Mohon lengkapi semua kolom sebelum mengirim.");
+      e.preventDefault(); // Stop pengiriman form
+    }
+
+    // Validasi email sederhana
+    const polaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!polaEmail.test(email)) {
+      alert("Email tidak valid.");
+      e.preventDefault();
+    }
+  });
+</script>
+
+
+</body>
+</html>
